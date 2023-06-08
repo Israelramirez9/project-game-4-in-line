@@ -1,14 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>4 in line</title>
+    <link rel="icon" href="images/icon.png">
 </head>
-<body>
 
-    
-    
+<body>
+    <div id="game">
+        <div id="table-menu">
+            <div class="block" id="table-menu-size">
+                <h2> Seleccione Tamaño:</h2>
+                <div>
+                    <input type="radio" name="size" id="option-1">
+                    <label for="option-1">7x6</label>
+                    <input type="radio" name="size" id="option-2">
+                    <label for="option-2">8x7</label>
+                    <input type="radio" name="size" id="option-3">
+                    <label for="option-3">9x8</label>
+                    <input type="radio" name="size" id="option-4">
+                    <label for="option-4">10x9</label>
+
+                </div>
+            </div>
+            <div class="block " id="table-menu-game-mode">
+                <h3>Modo de juego:</h3>
+                <div>
+                    <input type="radio" name="game-mode" id="mode-single">
+                    <label for="mode-single"> Singleplayer</label>
+                    <input type="radio" name="game-mode" id="mode-multi">
+                    <label for="mode-multi"> Multiplayer</label>
+                </div>
+            </div>
+            <div class="block " id="table-menu-players">
+                <div id="table-menu-player1">
+                    <div>
+                        <label><b>Player 1:</b></label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <input type="color">
+                    </div>
+                </div>
+                <div id="table-menu-player2">
+                    <div>
+                        <label><b>Player 2:</b></label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <input type="color">
+                    </div>
+                </div>
+            </div>
+            <div class="block" id="table-menu-start">
+                <button>Start</button>
+            </div>
+        </div>
+    </div>
+
+    <script></script>
 </body>
+
 </html>
