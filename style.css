@@ -1,7 +1,8 @@
 body {
     background: rgb(254, 255, 193);
     background: linear-gradient(0deg, rgba(254, 255, 193, 1) 0%, rgba(249, 237, 213, 1) 100%);
-    font-family: sans-serif;
+    font-family: "JetBrains Mono", monospace;
+    margin: 0;
 
 }
 
@@ -13,6 +14,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 30px;
 }
 
 #table-menu {
@@ -33,11 +36,17 @@ body {
     padding: 0;
 }
 
-#table-menu-size,
 #table-menu-game-mode {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
+}
+
+#table-menu-size>* {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     gap: 10px;
 }
 
@@ -53,12 +62,12 @@ body {
     text-align: center;
 }
 
-#table-menu-start {
+#table-menu-button-start {
     text-align: end;
 }
 
-#table-menu-start button {
-        align-items: center;
+.button-style button {
+    align-items: center;
     appearance: none;
     background-color: #FCFCFD;
     border-radius: 4px;
@@ -88,16 +97,54 @@ body {
     font-size: 18px;
 }
 
-#table-menu-start button:focus {
+.button-style button:disabled {
     box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    background-color: rgb(192, 185, 185);
+    color: white;
 }
 
-#table-menu-start button:hover {
+.button-style button:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
     transform: translateY(-2px);
 }
 
-#table-menu-start button:active {
+.button-style button:active {
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
+}
+
+#table-game {
+    margin: 0 auto;
+    background-color: black;
+    display: none;
+}
+
+td {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+#screen-turn {
+    margin: 0;
+    background-color: black;
+    width: 25%;
+    height: 10%;
+    border-radius: 30px;
+    border: solid white 5px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding:0;
+}
+
+#screen-turn-player {    
+    margin: 0;
+    width: 80%;
+    height: 80%;    
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
 }

@@ -10,59 +10,84 @@
     <link rel="icon" href="images/icon.png">
 </head>
 
-<body>
+<body>    
     <div id="game">
         <div id="table-menu">
             <div class="block" id="table-menu-size">
-                <h2> Seleccione Tamaño:</h2>
+                <h2> Choose Size (Row x Column):</h2>
                 <div>
-                    <input type="radio" name="size" id="option-1">
-                    <label for="option-1">7x6</label>
-                    <input type="radio" name="size" id="option-2">
-                    <label for="option-2">8x7</label>
-                    <input type="radio" name="size" id="option-3">
-                    <label for="option-3">9x8</label>
-                    <input type="radio" name="size" id="option-4">
-                    <label for="option-4">10x9</label>
+                    <div class="button-style">
+                        <button id="1" class="option-size-game">6x7</button>
+                    </div>
+                    <div class="button-style">
+                        <button id="2" class="option-size-game">7x8</button>
+                    </div>
+                    <div class="button-style">
+                        <button id="3" class="option-size-game">8x9</button>
+                    </div>
+                    <div class="button-style">
+                        <button id="4" class="option-size-game">9x10</button>
+                    </div>
 
                 </div>
             </div>
             <div class="block " id="table-menu-game-mode">
-                <h3>Modo de juego:</h3>
-                <div>
-                    <input type="radio" name="game-mode" id="mode-single">
-                    <label for="mode-single"> Singleplayer</label>
-                    <input type="radio" name="game-mode" id="mode-multi">
-                    <label for="mode-multi"> Multiplayer</label>
+                <h3>Game Mode:</h3>
+                <div class="button-style">
+                    <button class="option-game-mode" id="button-singleplayer">Singleplayer</button>
+                    <button class="option-game-mode" id="button-multiplayer">Multiplayer</button>
                 </div>
             </div>
             <div class="block " id="table-menu-players">
                 <div id="table-menu-player1">
                     <div>
                         <label><b>Player 1:</b></label>
-                        <input type="text">
+                        <input id="input-player1"type="text" placeholder="Name">
                     </div>
-                    <div>
-                        <input type="color">
-                    </div>
+                    <select class="color" class="button-style" id="color-player1">
+                        <option value="" selected disabled>Seleccione un color ...</option>
+                        <option value="#FF0000">Red</option>
+                        <option value="#0060FF">Blue</option>
+                        <option value="#29FF00">Green</option>
+                        <option value="#FEFF00">Yellow</option>
+                        <option value="#9400D3">Purple</option>
+                        <option value="#FFC0CB">Pink</option>
+                    </select>
                 </div>
                 <div id="table-menu-player2">
                     <div>
                         <label><b>Player 2:</b></label>
-                        <input type="text">
+                        <input id="input-player2" type="text" placeholder="Name">
                     </div>
-                    <div>
-                        <input type="color">
-                    </div>
+                    <select class="color" id="color-player2">
+                        <option value="" selected disabled>Seleccione un color ...</option>
+                        <option value="#FF0000">Red</option>
+                        <option value="#0060FF">Blue</option>
+                        <option value="#29FF00">Green</option>
+                        <option value="#FEFF00">Yellow</option>
+                        <option value="#9400D3">Purple</option>
+                        <option value="#FFC0CB">Pink</option>
+                    </select>
                 </div>
             </div>
-            <div class="block" id="table-menu-start">
-                <button>Start</button>
+            <div id="table-menu-button-start" class="button-style block">
+                <button id="button-start">Start</button>
             </div>
         </div>
-    </div>
+        <div id="screen-turn">
+            <div id="screen-turn-player"></div>           
+        </div>
+        <div id="table-game">
 
-    <script></script>
+            <table>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    
+    </div>
+    
+    <script src="script.js" type="module"></script>
 </body>
 
 </html>
